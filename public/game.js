@@ -139,12 +139,12 @@ function playRound(playerSelection, compSelection) {
     const result = checkWinner(playerSelection, compSelection);
     if(result == "Tie") {
         const paragh1 = document.createElement("p");
-        paragh1.innerText = `It's a tie`;
+        paragh1.innerText = `It's a tie! stop thinking like the aliens`;
        resultes.appendChild(paragh1);
     }
     else if(result == "Player!") {
         const paragh2 = document.createElement("div");; // the back tick allows variables in them
-        paragh2.innerText = `You Win! ${playerSelection} Destroys ${compSelection}`
+        paragh2.innerText = `You Win! the aliens choosed ${compSelection}`
         resultes.appendChild(paragh2);
         playerScore++;
         plScore.innerText = playerScore;
@@ -152,7 +152,7 @@ function playRound(playerSelection, compSelection) {
        
     }  else if (result == "Computer"){
         const paragh3 = document.createElement("p");
-        paragh3.innerText = `you Lose! ${compSelection} Destroys ${playerSelection}`;
+        paragh3.innerText = `you Lose! ${compSelection} beats ${playerSelection}`;
         resultes.appendChild(paragh3);
         computerScore++;
         compScore.innerText = computerScore;

@@ -90,7 +90,9 @@ img{
   transition: all 0.3s linear;
   text-decoration: none;
 }
-
+/* .menu{
+  margin-right: 100px;
+} */
 .sidebar {
   position: fixed;
   top: 0;
@@ -121,7 +123,7 @@ img{
 
 .fa-times {
   font-size: 1.5rem;
-  color: #e94949;
+  color: #382e2e;
   cursor: pointer;
 }
 
@@ -134,11 +136,10 @@ img{
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
+  background-color: #e94949;
 }
 
-.logo {
-  margin-left: -15px;
-}
+
 
 @media (min-width: 676px) {
   .sidebar {
@@ -150,9 +151,29 @@ img{
   background: #f8a5a5;
   padding-left: 1.7rem;
 }
+li{
+  /* text-decoration: none; */
+list-style: none;
+}
 .hide-contents{
   visibility: hidden;
 }
 .show-contents{
   visibility: visible;
+}
+/* ............sidebar profile img................ */
+.profile-img{
+  border: 1px solid pink;
+  
+}
+.profile-img {
+  max-width: 200px;
+  border-radius: 120px;
+}
+@media (max-width: 800px) {
+  .profile-img {
+  max-width: 100px;
+  border-radius: 70px;
+
+  }
 }
