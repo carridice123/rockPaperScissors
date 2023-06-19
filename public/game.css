@@ -74,10 +74,15 @@ img{
 #start{
     width: max(8%, 90px);
     height: auto;
+    font-weight: 800;
+    font-size: large;
 }
 #stop{
     width: max(4%, 50px);
-    height: auto
+    height: auto;
+    font-weight: 800;
+    font-size: large;
+
 }
 
 /* show side bar   */
@@ -91,7 +96,7 @@ img{
   text-decoration: none;
 }
 /* .menu{
-  margin-right: 100px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 } */
 .sidebar {
   position: fixed;
@@ -141,12 +146,16 @@ img{
 
 
 
+
 @media (min-width: 676px) {
   .sidebar {
     width: 500px;
   }
 }
-
+.title{
+  font-style: italic;
+  margin-right: 30px;
+}
 .menu a:hover {
   background: #f8a5a5;
   padding-left: 1.7rem;
@@ -175,5 +184,57 @@ list-style: none;
   max-width: 100px;
   border-radius: 70px;
 
+  }
+}
+
+/* dark mode sec................. */
+.input {
+  visibility: hidden;
+}
+
+.label {
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  background-color: lightgray;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.circle {
+  width: 34px;
+  background-color: white;
+  height: 34px;
+  border-radius: 50%;
+  top: 3px;
+  position: absolute;
+  left: 3px;
+  animation: toggleOff 0.4s linear forwards;
+}
+
+.input:checked + .label {
+  background-color: #c7d2fe;
+}
+
+.input:checked + .label .circle {
+  animation: toggleOn 0.4s linear forwards;
+  background-color: #020617;
+}
+
+@keyframes toggleOn {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(40px);
+  }
+}
+
+@keyframes toggleOff {
+  0% {
+    transform: translateX(40px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

@@ -95,7 +95,47 @@ function showContents(){
     contents.classList.add('show-contents')
 }
 
-//getting access to the buttons
+// SETTING DARK MODE
+
+const inputEl = document.querySelector(".input");
+
+const bodyEl = document.querySelector("#body");
+
+inputEl.checked = JSON.parse(localStorage.getItem("mode"));
+
+updateBody();
+
+function updateBody() {
+  if (inputEl.checked) {
+    bodyEl.style.background = "black";
+    startEl.style.color = "red";
+    stopEl.style.color = "red";
+    contents.style.color = "white";
+
+
+  } else {
+    bodyEl.style.background = "white";
+    startEl.style.color = "black";
+    stopEl.style.color = "black";
+    contents.style.color = "black";
+
+    
+  }
+}
+
+inputEl.addEventListener("input", () => {
+  updateBody();
+  updateLocalStorage();
+});
+
+function updateLocalStorage() {
+  localStorage.setItem("mode", JSON.stringify(inputEl.checked));
+}
+
+
+
+
+//getting access to the choice the buttons
 const rockBtn = document.querySelector(".btns1");
 const paperBtn = document.querySelector(".btns2");
 const scissorsBtn = document.querySelector(".btns3");
@@ -143,7 +183,7 @@ function playRound(playerSelection, compSelection) {
        resultes.appendChild(paragh1);
     }
     else if(result == "Player!") {
-        const paragh2 = document.createElement("div");; // the back tick allows variables in them
+        const paragh2 = document.createElement("div"); // the back tick allows variables in them
         paragh2.innerText = `You Win! the aliens choosed ${compSelection}`
         resultes.appendChild(paragh2);
         playerScore++;
