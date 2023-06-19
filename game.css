@@ -1,0 +1,158 @@
+body {
+    /* background-color: #020617; */
+    margin: 0;
+}
+.content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* margin: 0; */
+    padding: 30px;
+    visibility: hidden;
+}
+/* game page images */
+.game-imgs{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 120px;
+}
+img{
+    max-width: 180px;
+    height: 90px;
+    border-radius: 60px;
+    cursor: pointer;
+}
+.g-imgs{
+    display: flex;
+    flex-direction: column;
+}
+
+/* style scores  */
+.scores{
+    display: flex;
+    align-items: center;
+    
+}
+.e-score{
+  padding-left: 12px;
+
+}
+.a-score{
+  padding-left: 10px;
+}
+.player-score{
+    border-right: 3px solid red;
+}
+#results{
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+}
+/* .aliens-score{
+    text-decoration: underline red 3px;
+} */
+.underline{
+    text-decoration: underline red 3px;
+
+}
+/* .head{
+    width: 100%;
+    height: 30px;
+    background-color: red;
+    padding: 0;
+    margin: 0;
+    
+} */
+/* start game and pause timer  */
+.button-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    margin-top: 3em;
+}
+#start{
+    width: max(8%, 90px);
+    height: auto;
+}
+#stop{
+    width: max(4%, 50px);
+    height: auto
+}
+
+/* show side bar   */
+
+.menu a {
+  display: block;
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  color: grey;
+  transition: all 0.3s linear;
+  text-decoration: none;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s linear;
+  transform: translate(-100%);
+}
+
+.show-sidebar {
+  transform: translate(0);
+}
+
+.fa-bars {
+  position: fixed;
+  top: 2rem;
+  right: 3rem;
+  color: #e94949;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.fa-bars:hover {
+  color: black;
+}
+
+.fa-times {
+  font-size: 1.5rem;
+  color: #e94949;
+  cursor: pointer;
+}
+
+.fa-times:hover {
+  color: black;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.logo {
+  margin-left: -15px;
+}
+
+@media (min-width: 676px) {
+  .sidebar {
+    width: 500px;
+  }
+}
+
+.menu a:hover {
+  background: #f8a5a5;
+  padding-left: 1.7rem;
+}
+.hide-contents{
+  visibility: hidden;
+}
+.show-contents{
+  visibility: visible;
+}
