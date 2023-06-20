@@ -7,6 +7,11 @@ const button1 = document.getElementById('btn-1');
 const button2 = document.getElementById('btn-2');
 const button3 = document.getElementById('btn-3');
 
+const  imgs1 = document.getElementById('imgs-1');
+const  imgs2 = document.getElementById('imgs-2');
+const  imgs3 = document.getElementById('imgs-3');
+
+
 //showing the contents of the page
 const contents = document.querySelector('.content');
 
@@ -82,12 +87,16 @@ function disableButtons(){
     button1.disabled = true;
     button2.disabled = true;
     button3.disabled = true;
-
 }
+
+
+
 function enableButtons(){
     button1.disabled = false;
     button2.disabled = false;
     button3.disabled = false;
+
+
 
 }
 
@@ -114,7 +123,7 @@ function updateBody() {
 
 
   } else {
-    bodyEl.style.background = "white";
+    bodyEl.style.background = "#86efac";
     startEl.style.color = "black";
     stopEl.style.color = "black";
     contents.style.color = "black";

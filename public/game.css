@@ -1,14 +1,22 @@
 body {
-    /* background-color: #020617; */
-    margin: 0;
+    background-color: #020617;
+    
+    /* background-image: url('images/alien2.jpg'); */
+    /* background-size: cover; */
 }
 .content{
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* margin: 0; */
     padding: 30px;
     visibility: hidden;
+}
+.hids{
+  visibility: hidden;
+  
+}
+.shown{
+  visibility: visible;
 }
 /* game page images */
 .game-imgs{
@@ -45,7 +53,7 @@ img{
 }
 #results{
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   text-align: center;
 }
 /* .aliens-score{
